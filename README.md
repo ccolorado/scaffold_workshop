@@ -1,18 +1,27 @@
+# Links
+
+Linktree: https://linktr.ee/scaffoldstark
+Scaffold Stark: https://scaffoldstark.com/
+SpeedRun Stark: https://speedrunstark.com/
+Github: https://github.com/Scaffold-Stark/scaffold-stark-2
+
+https://github.com/Scaffold-Stark/basecamp
+OnlyDust: https://app.onlydust.com/p/speedrun-scaffold-stark
+Documentation: https://docs.scaffoldstark.com/
+Slides: https://docs.google.com/presentation/d/1RUWdsNufOmNgMtMuIgLtGAWpSkUNB7dsUUMVZYbTAhw/edit#slide=id.g32c671356c8_1_0
+Telegram: https://t.me/+wO3PtlRAreo4MDI9
 
 # Itroducción
 
-## Descripcin Programa
+## Descripción Programa
 
 0 - 10  Starknet Basecamp  - Scaffold Stark Session 1
 
 ## Oportunidades
 
-## Cairo
 
 
-# Practica
-
-## Dependencias:
+# Dependencias:
 
 | Nombre            | Version     | Installation Guide        |
 | ---               | ---         | ---                       |
@@ -25,23 +34,79 @@
 | Scaffold Starknet | 2.9.1       |                           |
 
 
-### OS
+## WSL (windows)
+### Installation
+Command prompt __as administrator__:
+`wsl --install`
+Reboot
+
+Command prompt __as administrator__:
+`wsl --install -d Ubuntu`
+
+Reboot
+
+### Connect
+Command prompt:
+`wsl --update`
+
+## asdf
+
+`$ type asdf && asdf --version`
+> v0.13.1-0586b37
+
+Installation Guide: https://asdf-vm.com/guide/getting-started.html
+
+`npx create-stark@latest || git clone https://github.com/Scaffold-Stark/scaffold-stark-2.git`
+
+`$ type scarb && scarb --version`
+> scarb is hashed (/home/ccolorado/.asdf/shims/scarb)
+scarb 2.9.2 (5070ff374 2024-12-11)
+cairo: 2.9.2 (https://crates.io/crates/cairo-lang-compiler/2.9.2)
+sierra: 1.6.0
 
 
-#### Windows
+asdf install scarb 2.9.2
+
+# Devnet
+
+Installation Guide: https://docs.scaffoldstark.com/quick-start/installation#install-starknet-devnet
+
+1. Check installation and version
+`type starknet-devnet && starknet-devnet --version`
+
+2. Install if missing or wrong version
+`asdf install starknet-devnet 0.2.3`
+
+## Node
+Install nvm
+`https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/`
+
+nvm ls-remote --lts
+
+nvm install v20.18.2
+nvm install  v20.18.2
+nvm alias default v20.18.2
+
+echo "v20.18.2" > .nvmrc
+
+node --version
 
 
-#### Instalación
+create-stark@latest
+
+## OS
+
+
+## Windows
+
+
+### Instalación
 
 npm install --global yarn 
 | Cairo 1.0 VSCode | 2.9.1              | https://marketplace.visualstudio.com/items?itemName=starkware.cairo1
 
 
-# Ayuda
-Documentacion de scaffold stark
-https://docs.scaffoldstark.com/
-
-# Anatomia
+# Anatomia de Scaffold
 
 ## Archivos y directorios
 
@@ -99,20 +164,62 @@ VERCEL_URL
 # Commandos en package.json #scripts
 
 
+# Basecamp
 
 
-# Links
+## Setup:
+git cloen https://github.com/Scaffold-Stark/basecamp basecamp
 
-Linktree: https://linktr.ee/scaffoldstark
-Scaffold Stark: https://scaffoldstark.com/
-SpeedRun Stark: https://speedrunstark.com/
-Github: https://github.com/Scaffold-Stark/scaffold-stark-2
 
-https://github.com/Scaffold-Stark/basecamp
-OnlyDust: https://app.onlydust.com/p/speedrun-scaffold-stark
-Documentation: https://docs.scaffoldstark.com/
-Slides: https://docs.google.com/presentation/d/1RUWdsNufOmNgMtMuIgLtGAWpSkUNB7dsUUMVZYbTAhw/edit#slide=id.g32c671356c8_1_0
-Telegram: https://t.me/+wO3PtlRAreo4MDI9
+git co step-0
+yarn install
+
+yarn chain
+yarn deploy
+yarn start
+
+# Setup public network Wallets
+
+# Hooks
+
+```tx
+const { data: YourContract } = useDeployedContractInfo("YourContract");
+
+const { data: premium } = useScaffoldReadContract({
+    contractName: "YourContract",
+    functionName: "premium",
+});
+
+const { sendAsync: setGreetingNoPayment } = useScaffoldWriteContract({
+    contractName: "YourContract",
+    functionName: "set_greeting",
+    args: [greeting, 0n],
+});
+
+
+k
+
+
+const { sendAsync: setGreetingWithPayment } = useScaffoldMultiWriteContract({
+    calls: [
+        {
+            contractName: "Eth",
+            functionName: "approve",
+            args: [YourContract?.address, BigInt(inputAmount)],
+        },
+        {
+            contractName: "YourContract",
+            functionName: "set_greeting",
+            args: [greeting, BigInt(inputAmount)],
+        },
+    ],
+});
+
+```
+
+
+
+
 
 
 
