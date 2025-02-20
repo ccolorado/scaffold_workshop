@@ -1,23 +1,16 @@
 # Links
 
-Linktree: https://linktr.ee/scaffoldstark
-Scaffold Stark: https://scaffoldstark.com/
-SpeedRun Stark: https://speedrunstark.com/
-Github: https://github.com/Scaffold-Stark/scaffold-stark-2
-
-https://github.com/Scaffold-Stark/basecamp
-OnlyDust: https://app.onlydust.com/p/speedrun-scaffold-stark
-Documentation: https://docs.scaffoldstark.com/
-Slides: https://docs.google.com/presentation/d/1RUWdsNufOmNgMtMuIgLtGAWpSkUNB7dsUUMVZYbTAhw/edit#slide=id.g32c671356c8_1_0
-Telegram: https://t.me/+wO3PtlRAreo4MDI9
-
-# Itroducción
-
-## Descripción Programa
-
-0 - 10  Starknet Basecamp  - Scaffold Stark Session 1
-
-## Oportunidades
+| Nombre         | URL                                                                                                                |
+| ---            | ---                                                                                                                |
+| Linktree       | https://linktr.ee/scaffoldstark                                                                                    |
+| Scaffold Stark | https://scaffoldstark.com/                                                                                         |
+| SpeedRun Stark | https://speedrunstark.com/                                                                                         |
+| Github         | https://github.com/Scaffold-Stark/scaffold-stark-2                                                                 |
+| Basecamp       | https://github.com/Scaffold-Stark/basecamp                                                                         |
+| OnlyDust       | https://app.onlydust.com/p/speedrun-scaffold-stark                                                                 |
+| Documentation  | https://docs.scaffoldstark.com/                                                                                    |
+| Slides         | https://docs.google.com/presentation/d/1RUWdsNufOmNgMtMuIgLtGAWpSkUNB7dsUUMVZYbTAhw/edit#slide=id.g32c671356c8_1_0 |
+| Telegram       | https://t.me/+wO3PtlRAreo4MDI9                                                                                     |
 
 
 
